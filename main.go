@@ -20,6 +20,9 @@ func main() {
 	cell = row.AddCell()
 	cell.Value = "日本語"
 
+	cell = sheet.Cell(3, 5)
+	cell.Value = "直接指定はできない模様(読み込み用？)"
+
 	err = file.Save("foo.xlsx")
 	if err != nil {
 		fmt.Printf(err.Error())
