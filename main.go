@@ -13,9 +13,13 @@ func main() {
 	}
 
 	row := sheet.AddRow()
-	cell := row.AddCell()
 
+	cell := row.AddCell()
 	cell.Value = "I am a cell!"
+
+	cell = row.AddCell()
+	cell.Value = "日本語"
+
 	err = file.Save("foo.xlsx")
 	if err != nil {
 		fmt.Printf(err.Error())
